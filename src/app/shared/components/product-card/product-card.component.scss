@@ -1,0 +1,35 @@
+.card {
+    border-radius: 40px;
+    width: 100%;
+    max-width: 400px;
+    height: 480px;
+    background: radial-gradient(circle, #fab68e 1%, #fffcf8 100%);
+    display: grid;
+    grid-template-rows: 50px 1fr 80px;
+    padding: 20px;
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        i {
+            border-radius: 100%;
+            border: 1px solid #ff9100;
+            height: 30px;
+            width: 30px;
+            display: grid;
+            place-items: center;
+        }
+    }
+    .img-product {
+        .img-background {
+            border-radius: 40px;
+            background: radial-gradient(circle, #fcc10c 45%, #ffffff 46%, #ff6b01 47%);
+            height: 140px;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            position: relative;
+            top: -40px;
+        }
+    }
+}
