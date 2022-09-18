@@ -1,35 +1,61 @@
 .card {
     border-radius: 40px;
-    width: 100%;
-    max-width: 400px;
-    height: 480px;
-    background: radial-gradient(circle, #fab68e 1%, #fffcf8 100%);
+    height: 431px;
+    width: 355px;
+    background: radial-gradient(circle, #fab68e 1%, #fffcf800 100%);
     display: grid;
     grid-template-rows: 50px 1fr 80px;
-    padding: 20px;
+    padding: 40px;
     .buttons {
         display: flex;
         justify-content: space-between;
         i {
             border-radius: 100%;
-            border: 1px solid #ff9100;
-            height: 30px;
-            width: 30px;
+            border: 1px solid #e5d9d1;
+            height: 40px;
+            width: 40px;
             display: grid;
             place-items: center;
         }
     }
     .img-product {
         .img-background {
+            display: flex;
             border-radius: 40px;
             background: radial-gradient(circle, #fcc10c 45%, #ffffff 46%, #ff6b01 47%);
             height: 140px;
             width: 100%;
         }
         img {
-            width: 100%;
+            width: 130%;
+            margin: auto;
             position: relative;
-            top: -40px;
+            bottom: -5px;
+            right: 43px;
+            transform: rotate(330deg);
         }
     }
+    .product-info {
+        color: blue;
+        p {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+}
+
+$bg-color: #ffffff;
+$dot-color: #fb6901;
+
+$dot-size: 1px;
+$dot-space: 15px;
+
+.pattern-dot {
+    background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+    background-size: $dot-space $dot-space;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
 }

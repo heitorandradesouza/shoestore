@@ -1,1 +1,18 @@
-<app-product-card></app-product-card>
+<div class="header-orange-box">
+    <span class="home-product">
+        <span style="color: white">Home</span>
+        <span>/</span>
+        <span>Product</span>
+    </span>
+    <div class="showing-filter">
+        <span>Showing 1-12 of 36 results</span>
+        <span>Default Setting</span>
+    </div>
+</div>
+<span class="shop-header center">Shop</span>
+
+<div class="itens-flex">
+    <div *ngFor="let product of productList">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>

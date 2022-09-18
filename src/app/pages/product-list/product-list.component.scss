@@ -1,0 +1,49 @@
+.itens-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  bottom: 170px;
+  left: 60px;
+  height: 250%;
+  width: 100%;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+
+
+.header-orange-box {
+  padding: 0px 30px 30px 30px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -25px;
+  position: relative;
+
+  .showing-filter {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.home-product {
+  display: flex;
+  gap: 3px;
+}
+
+.shop-header {
+  font-weight: 700;
+  top: -73px;
+  font-size: 20px;
+  position: relative;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

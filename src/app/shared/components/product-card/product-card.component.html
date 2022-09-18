@@ -1,14 +1,21 @@
-<div class="card">
-    <div class="buttons">
-        <i class="material-icons form-icon icon ">fullscreen</i>
-        <i class="material-icons form-icon icon ">lock</i>
-    </div>
-    <div class="img-product">
-        <div class="img-background">
-            <img src="assets/shoes/Yellow Shoe.png">
+<div class="pattern-dot">
+    <div class="card">
+        <div class="buttons">
+            <i class="material-icons form-icon icon ">fullscreen</i>
+            <i class="material-icons form-icon icon ">shopping_cart</i>
         </div>
-    </div>
-    <div class="product-info">
-
+        <div class="img-product">
+            <div class="img-background">
+                <img [src]="'assets/shoes/'+product.img">
+            </div>
+        </div>
+        <div class="product-info">
+            <p>
+                {{product.name}}
+            </p>
+            <p>
+                $236.00
+            </p>
+        </div>
     </div>
 </div>
