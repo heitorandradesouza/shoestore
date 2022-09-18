@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -7,107 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
-  productList: any = [
-    {
-      name: 'Nike 01',
-      price: '236',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Nike Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    },
-    {
-      name: 'Adidas 01',
-      price: '180',
-      primarayColor: '#000000',
-      secondaryColor: '#c58b25',
-      score: 5,
-      img: 'Green Shoe.png'
-    }
-  ]
-
+  constructor(private productService: ProductService) { }
+  productList: any = []
+  
   ngOnInit(): void {
+    this.productService.getProductList().subscribe((retorno: any) => {
+      this.productList = retorno;
+    })
   }
 
 }

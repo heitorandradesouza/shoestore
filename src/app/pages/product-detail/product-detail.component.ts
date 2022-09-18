@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route: ActivatedRoute, private productService: ProductService) { }
+  product:any = {}
   ngOnInit(): void {
+    this.productService.getProductDetail(this.route.snapshot.paramMap.get('url')).subscribe(retorno => {
+      this.product = retorno
+    })
+
   }
 
 }

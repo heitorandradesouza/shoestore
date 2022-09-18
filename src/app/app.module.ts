@@ -7,6 +7,7 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
