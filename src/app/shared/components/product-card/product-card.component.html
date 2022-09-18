@@ -1,8 +1,8 @@
 <div class="pattern-dot">
-    <div class="card" [routerLink]="'/detail/'+product.url">
+    <div class="card">
         <div class="buttons">
-            <i class="material-icons form-icon icon ">fullscreen</i>
-            <i class="material-icons form-icon icon ">shopping_cart</i>
+            <i class="material-icons form-icon icon " [routerLink]="'/detail/'+product.url">fullscreen</i>
+            <i class="material-icons form-icon icon " (click)="addToCart(product)">shopping_cart</i>
         </div>
         <div class="img-product">
             <div class="img-background">

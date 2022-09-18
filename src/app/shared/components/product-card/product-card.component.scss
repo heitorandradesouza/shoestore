@@ -16,6 +16,8 @@
             width: 40px;
             display: grid;
             place-items: center;
+            cursor: pointer;
+            z-index: 99;
         }
     }
     .img-product {
