@@ -1,3 +1,24 @@
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #feac4e;
+}
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    top: -15px;
+
+    .voltar-button {
+        background: #ffebc1;
+        color: #332f2f;
+        height: 50px;
+        border-radius: 5px;
+        border: solid 1px white;
+    }
+}
+
 .cart {
     display: grid;
     grid-template-columns: 5fr 4fr;
@@ -38,9 +59,18 @@
                 .product-info {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .linha-info {
+                        display: flex;
+                        gap: 5px;
+                    }
+
                     .delete {
                         display: flex;
                         justify-content: space-between;
+                        margin-bottom: -5px;
+
                         i {
                             border: 1px solid #e2e2e2;
                             border-radius: 100%;

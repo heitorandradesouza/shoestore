@@ -10,12 +10,10 @@ import { ProductService } from 'src/app/shared/services/product.service';
 export class ProductDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
-  product:any = {}
+  product: any = {}
   ngOnInit(): void {
     this.productService.getProductDetail(this.route.snapshot.paramMap.get('url')).subscribe(retorno => {
       this.product = retorno
     })
-
   }
-
 }
