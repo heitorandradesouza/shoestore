@@ -5,8 +5,14 @@
         <span>Product</span>
     </span>
     <div class="showing-filter">
-        <span>Showing 1-12 of 36 results</span>
-        <span>Default Setting</span>
+        <span>Showing 1-12 of {{productList.length}} results</span>
+        <mat-form-field appearance="fill">
+            <mat-select [(value)]="filterSelected">
+                <mat-option value="default" (click)="sortBy('default')">Default sorting</mat-option>
+                <mat-option value="review" (click)="sortBy('review')">Sort by review</mat-option>
+                <mat-option value="price" (click)="sortBy('price')">Sort by price</mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
 </div>
 <span class="shop-header center">Shop</span>

@@ -15,48 +15,36 @@
 <div class="detail-box">
     <div class="sneaker-details">
         <div class="sneaker-name">{{product.name}}</div>
-        <div class="sneaker-description">Nike's Air Force 1s were among the most popular sneakers this year</div>
+        <div class="sneaker-description">{{product.description}}</div>
         <div class="sneaker-pics">
             <div class="pic-box light-color">
-                <img class="detail-pic" style="transform: rotate(-90deg)" [src]="'assets/shoes/Nike Shoe.png'">
+                <img class="detail-pic" style="transform: rotate(-90deg)" [src]="'assets/shoes/'+product.img">
             </div>
             <div class="pic-box orange-color">
-                <img class="detail-pic" [src]="'assets/shoes/Nike Shoe.png'">
+                <img class="detail-pic" [src]="'assets/shoes/'+product.img">
             </div>
             <div class="pic-box light-color">
-                <img class="detail-pic" style="transform: rotate(-45deg)" [src]="'assets/shoes/Nike Shoe.png'">
+                <img class="detail-pic" style="transform: rotate(-45deg)" [src]="'assets/shoes/'+product.img">
             </div>
         </div>
     </div>
     <div class="sneaker-picture-price">
         <div class="circle-shadow">
             <div class="sneaker-picture-circle">
-                <img class="sneaker-picture" [src]="'assets/shoes/Nike Shoe.png'">
-                <div class="price">$ 290,0 </div>
+                <img class="sneaker-picture" [src]="'assets/shoes/'+product.img">
+                <div class="price">{{product.price | currency: 'BRL'}}</div>
             </div>
         </div>
     </div>
     <div class="specifications">
         <div class="review">
             <span class="speci-text">Review:</span>
-            <div>
-                <span class="material-icons" style="color: #fdc20c">
-                    grade
-                </span>
-                <span class="material-icons" style="color: #fdc20c">
-                    grade
-                </span>
-                <span class="material-icons" style="color: #fdc20c">
-                    grade
-                </span>
-                <span class="material-icons" style="color: #fdc20c">
-                    grade
-                </span>
+            <div *ngFor="let n of numSequence(product.score)">
                 <span class="material-icons" style="color: #fdc20c">
                     grade
                 </span>
             </div>
-            <span class="speci-text">5.0 (52)</span>
+            <span class="speci-text">{{product.score}} ({{product.qtdReview}})</span>
         </div>
         <div class="colors">
             <span class="speci-text">Color:</span>

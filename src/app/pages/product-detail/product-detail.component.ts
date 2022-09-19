@@ -16,4 +16,8 @@ export class ProductDetailComponent implements OnInit {
       this.product = retorno
     })
   }
+
+  numSequence(n) {
+    return Array(n);
+  }
 }

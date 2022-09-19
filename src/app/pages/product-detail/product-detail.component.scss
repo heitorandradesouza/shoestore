@@ -1,192 +1,183 @@
 .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+}
+
+.home-product {
+  display: flex;
+  gap: 3px;
+}
+
+.header-orange-box {
+  padding: 0px 30px 30px 30px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -25px;
+  position: relative;
+
+  .change-product {
     display: flex;
-    justify-content: center;
+    gap: 10px;
     align-items: center;
   }
-  
-  .material-icons{
-      font-family: "Material Icons";
-  }
-  
-  .home-product {
-      display: flex;
-      gap: 3px;
-    }
-  
-  .header-orange-box {
-      padding: 0px 30px 30px 30px;
-      font-size: 10px;
+}
+
+.details-header {
+  font-weight: 700;
+  top: -76px;
+  font-size: 35px;
+  position: relative;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.detail-box {
+  box-shadow: inset 0 0 50px 0px #ffffffc4;
+  background: #ffebc1;
+  height: 543px;
+  border-radius: 50px;
+  margin: 0px 50px 50px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 100px 55px 100px 55px;
+
+  .sneaker-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .sneaker-name {
+      font-size: 30px;
       font-weight: 700;
+      color: #45409c;
+      line-height: 30px;
+    }
+
+    .sneaker-description {
+      font-size: 20px;
+      color: #878588;
+    }
+
+    .sneaker-pics {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      top: -25px;
-      position: relative;
-    
-      .change-product {
+      justify-content: space-evenly;
+
+      .pic-box {
+        height: 70px;
+        width: 70px;
+        border-radius: 15px;
         display: flex;
-        gap: 10px;
         align-items: center;
-      }
-    }
-  
-    .details-header {
-      font-weight: 700;
-      top: -76px;
-      font-size: 35px;
-      position: relative;
-      letter-spacing: -1px;
-      position: relative;
-    }
-    
-  
-  .detail-box {
-    box-shadow: inset 0 0 50px 0px #ffffffc4;
-    background: #ffebc1;
-    height: 543px;
-    border-radius: 50px;
-    margin: 0px 50px 50px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    padding: 100px 55px 100px 55px;
-  
-  
-    .sneaker-details {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-  
-      .sneaker-name {
-        font-size: 30px;
-        font-weight: 700;
-        color: #45409c;
-        line-height: 30px;
-      }
-  
-      .sneaker-description {
-        font-size: 20px;
-        color: #878588;
-  
-      }
-  
-      .sneaker-pics {
-        display: flex;
         justify-content: space-evenly;
-  
-        .pic-box {
-          height: 70px;
-          width: 70px;
-          border-radius: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-        }
-  
-        .light-color {
-          background: #fff3db;
-        }
-  
-        .orange-color {
-          background: #fdc20c;
-        }
       }
-  
-      .detail-pic {
-        height: 58px;
-        position: relative;
-        top: 5px;
+
+      .light-color {
+        background: #fff3db;
+      }
+
+      .orange-color {
+        background: #fdc20c;
       }
     }
-  
-  
-    .sneaker-picture-price {
-      display: flex;
-      flex-direction: column;
-  
-      .sneaker-picture-circle {
-        background: #ffedc7;
-        box-shadow: inset 0 0 50px 0px #ffffffc4;
-        height: 355px;
-        width: 355px;
-        border-radius: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-      }
-  
-      .sneaker-picture {
-        height: 320px;
-        position: relative;
-        top: 20px;
-        z-index: 0;
-      }
-  
-      .price {
-        font-size: 30px;
-        color: #45409c;
-        position: relative;
-        top: -45px;
-        font-weight: 700;
-        z-index: 1;
-      }
-    }
-  
-    .specifications {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-  
-      .speci-text {
-        font-weight: 600;
-      }
-    }
-  
-    .review {
-      display: flex;
-      align-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .colors {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-  
-      .color-circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 16px;
-      }
-    }
-  
-  
-    .sizes {
-      display: grid;
-      grid-template-columns: 50px 1fr;
-  
-      .buttons-sizes {
-        display: flex;
-        gap: 5px;
-        flex-wrap: wrap;
-      }
-  
-      .button-color-size {
-        background: #ffedc7;
-        box-shadow: inset 0 0 10px 0px #ffffffde;
-        width: 50px;
-      }
-  
-    }
-  
-    .add-to-cart {
-      background: black;
-      width: 200px;
-      color: #e7b10b;
-      height: 60px;
-      border-radius: 20px;
+
+    .detail-pic {
+      height: 58px;
     }
   }
-  
+
+  .sneaker-picture-price {
+    display: flex;
+    flex-direction: column;
+
+    .sneaker-picture-circle {
+      background: #ffedc7;
+      box-shadow: inset 0 0 50px 0px #ffffffc4;
+      height: 355px;
+      width: 355px;
+      border-radius: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+
+    .sneaker-picture {
+      height: 320px;
+      position: relative;
+      top: -30px;
+      z-index: 0;
+    }
+
+    .price {
+      font-size: 30px;
+      color: #45409c;
+      position: relative;
+      top: -45px;
+      font-weight: 700;
+      z-index: 1;
+    }
+  }
+
+  .specifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .speci-text {
+      font-weight: 600;
+    }
+  }
+
+  .review {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .colors {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .color-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 16px;
+    }
+  }
+
+  .sizes {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    .buttons-sizes {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .button-color-size {
+      background: #ffedc7;
+      box-shadow: inset 0 0 10px 0px #ffffffde;
+      width: 50px;
+    }
+  }
+
+  .add-to-cart {
+    background: black;
+    width: 200px;
+    color: #e7b10b;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
