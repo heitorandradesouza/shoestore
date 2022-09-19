@@ -2,33 +2,69 @@
     <div class="cart">
         <div class="section">
             <h1>Meu carrinho</h1>
-            <div class="product-box">
+            <div class="product-box" *ngFor="let product of productList">
                 <div class="details">
                     <div class="product-img">
-                        <img src="assets/shoes/Yellow Shoe.png">
+                        <img [src]="'assets/shoes/'+product.img">
                     </div>
                     <div class="product-info">
-                        <div>Tênis Nike Revolution 6 Next Nature Feminino</div>
-                        <div>Ref: # 2IC-4364-304-39</div>
-                        <div>Vendido e entregue por Netshoes</div>
-                        <div>Cor: Preto+Grafite</div>
-                        <div>Tamanho: 39</div>
+                        <div class="delete">
+                            <div class="center">{{product.name}}</div>
+                            <i class="material-icons form-icon icon " (click)="removeProduct(product)">delete</i>
+                        </div>
+                        <div style="line-height: 32px;">Ref: #{{product.refCod}}</div>
+                        <div style="line-height: 32px;">Cor: {{product.colorDef}}</div>
+                        <div style="line-height: 32px;">Tamanho: 39</div>
                     </div>
                 </div>
                 <div class="quantity">
                     <div class="quantity-box">
                         <span>Quantidade:</span>
-                        <div class="center"> <i class="material-icons form-icon icon ">remove_circle_outline</i></div>
-                        <input type="number" disabled="true" class="center">
-                        <div class="center"> <i class="material-icons form-icon icon ">add_circle_outline</i></div>
+                        <div class="center"> <i class="material-icons form-icon icon "
+                                (click)="subtract(product)">remove_circle_outline</i></div>
+                        <div class="number-quantity">{{product.quantity}}</div>
+                        <div class="center"> <i class="material-icons form-icon icon "
+                                (click)="add(product)">add_circle_outline</i></div>
                     </div>
-                    <div>R$ 219,99</div>
+                    <div>{{product.price * product.quantity | currency: 'BRL'}}</div>
                 </div>
             </div>
-            
+
         </div>
         <div class="section">
             <h1>Resumo da compra</h1>
+            <div class="resumo-box">
+                <div class="linha-resumo">
+                    <span class="titulo-resumo">Subtotal (x itens)</span>
+                    <span class="valor-resumo">R$ 219,99</span>
+                </div>
+                <div class="linha-resumo">
+                    <span class="titulo-resumo">Frete</span>
+                    <span class="valor-resumo">R$ 19,99</span>
+                </div>
+                <div class="linha-resumo">
+                    <span class="titulo-resumo">Cupom de desconto</span>
+                    <a href="a">adicionar</a>
+                </div>
+                <div class="linha-resumo">
+                    <span class="titulo-resumo">Total de descontos</span>
+                    <span class="valor-resumo">R$ 0,00</span>
+                </div>
+                <div class="linha-resumo">
+                    <span class="titulo-resumo">Valor Total</span>
+                    <span class="valor-resumo">R$ 239,98</span>
+                </div>
+            </div>
+            <div class="resumo-buttons">
+                <button mat-raised-button class="finalizar-button">
+                    <span>Finalizar Compra</span>
+                    <span class="material-icons" style="position: relative; left: 5px">arrow_forward</span>
+                </button>
+                <button mat-raised-button class="comprar-button">
+                    <span>Comprar mais produtos</span>
+                    <span class="material-icons" style="position: relative; left: 5px">shopping_cart</span>
+                </button>
+            </div>
         </div>
     </div>
 </div>

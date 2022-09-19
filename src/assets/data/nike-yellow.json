@@ -1,0 +1,10 @@
+{
+   "name": "Nike",
+   "price": "236",
+   "primarayColor": "#000000",
+   "secondaryColor": "#c58b25",
+   "colorDef": "Amarelo+Preto",
+   "score": 5,
+   "img": "nike yellow.png",
+   "url": "nike-yellow"
+}

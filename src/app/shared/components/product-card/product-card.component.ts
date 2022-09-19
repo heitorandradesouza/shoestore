@@ -23,7 +23,16 @@ export class ProductCardComponent implements OnInit {
   }
 
   addToCart(product) {
-    localStorage.setItem('product', JSON.stringify(product))
+    var productList: any[];
+
+    if (localStorage.getItem('productList')) {
+      productList = JSON.parse(localStorage.getItem('productList') || '[{}]')
+    } else {
+      productList = [];
+    }
+    product.quantity = 1
+    productList.push(product)
+    localStorage.setItem('productList', JSON.stringify(productList))
     this.openSnackBar();
   }
 
