@@ -29,3 +29,21 @@ body {
     box-sizing: border-box;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.snackbar {
+    background: #000000;
+    color: #fdc20c;
+    position: relative;
+    top: 6px;
+    right: 16px;
+    button {
+        color: black;
+        background: #fbc00d;
+    }
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
