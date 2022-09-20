@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
   saveCart() {
     this.updateCart();
     localStorage.setItem('productList', JSON.stringify(this.productList))
+    window.dispatchEvent(new CustomEvent('updateCartEvent'));
   }
 
   removeProduct(product) {

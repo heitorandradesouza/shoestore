@@ -1,18 +1,18 @@
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div class="empty-cart center" *ngIf="productList.length == 0">
-    <span class="material-symbols-outlined" style="font-size: 70px">shopping_cart</span>
+    <span class="material-symbols-outlined" style="font-size: 70px">local_mall</span>
     <div class="center" style="gap: 3px">
-        <span style="color: #4e4e4e; font-size: 20px; font-weight: 500; letter-spacing: -0.5px">Seu carrinho está vazio
+        <span style="color: #4e4e4e; font-size: 20px; font-weight: 500; letter-spacing: -0.5px">There are no items in your cart
         </span>
         <span class="material-icons" style="font-size: 35px; color: #4e4e4e">sentiment_dissatisfied</span>
     </div>
-    <button mat-raised-button class="voltar-button" routerLink="/list">Voltar para a página inicial</button>
+    <button mat-raised-button class="voltar-button" routerLink="/list">Back to Home</button>
 </div>
 <div class="center">
     <div class="cart" *ngIf="productList.length > 0">
         <div class="section">
-            <h1>Meu carrinho</h1>
+            <h1>My cart</h1>
             <div class="product-box" *ngFor="let product of productList">
                 <div class="details">
                     <div class="product-img">
@@ -28,20 +28,20 @@
                             <span style="color: #898989; font-size: 13px">#{{product.refCod}}</span>
                         </span>
                         <span class="linha-info">
-                            <span style="font-weight: 500;">Cor:</span>
+                            <span style="font-weight: 500;">Color:</span>
                             <span style="color: #898989; font-size: 13px">{{product.colorDef}}</span>
                         </span>
                         <span class="linha-info">
-                            <span style="font-weight: 500;">Tamanho:</span>
+                            <span style="font-weight: 500;">Size:</span>
                             <span style="color: #898989; font-size: 13px">39</span>
                         </span>
-                        <mat-checkbox style="font-size: 12px; text-decoration: underline">Para presente?
+                        <mat-checkbox style="font-size: 12px; text-decoration: underline">Is this a gift?
                         </mat-checkbox>
                     </div>
                 </div>
                 <div class="quantity">
                     <div class="quantity-box">
-                        <span>Quantidade:</span>
+                        <span>Quantity:</span>
                         <div class="center"> <i class="material-icons form-icon icon "
                                 (click)="subtract(product)">remove_circle_outline</i></div>
                         <div class="number-quantity">{{product.quantity}}</div>
@@ -55,37 +55,37 @@
 
         </div>
         <div class="section">
-            <h1>Resumo da compra</h1>
+            <h1>Summary</h1>
             <div class="resumo-box">
                 <div class="linha-resumo">
                     <span class="titulo-resumo">Subtotal (x itens)</span>
                     <span class="valor-resumo">{{subtotal | currency: 'BRL'}}</span>
                 </div>
                 <div class="linha-resumo">
-                    <span class="titulo-resumo">Frete</span>
+                    <span class="titulo-resumo">Shipping</span>
                     <span class="valor-resumo">{{frete | currency: 'BRL'}}</span>
                 </div>
                 <div class="linha-resumo">
-                    <span class="titulo-resumo">Cupom de desconto</span>
-                    <a href="">adicionar</a>
+                    <span class="titulo-resumo">Discount coupon</span>
+                    <a href="">add</a>
                 </div>
                 <div class="linha-resumo">
-                    <span class="titulo-resumo">Total de descontos</span>
+                    <span class="titulo-resumo">Total discounts</span>
                     <span class="valor-resumo">{{desconto | currency: 'BRL'}}</span>
                 </div>
                 <div class="linha-resumo">
-                    <span class="titulo-resumo">Valor Total</span>
+                    <span class="titulo-resumo">Total</span>
                     <span class="valor-resumo">{{total | currency: 'BRL'}}</span>
                 </div>
             </div>
             <div class="resumo-buttons">
                 <button mat-raised-button class="finalizar-button">
-                    <span>Finalizar Compra</span>
+                    <span>Checkout</span>
                     <span class="material-icons" style="position: relative; left: 5px">arrow_forward</span>
                 </button>
                 <button mat-raised-button class="comprar-button">
-                    <span>Comprar mais produtos</span>
-                    <span class="material-icons" style="position: relative; left: 5px">shopping_cart</span>
+                    <span>Back to shopping!</span>
+                    <span class="material-icons" style="position: relative; left: 5px">local_mall</span>
                 </button>
             </div>
         </div>

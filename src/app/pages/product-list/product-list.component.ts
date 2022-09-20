@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
@@ -9,8 +9,9 @@ import { ProductService } from 'src/app/shared/services/product.service';
 export class ProductListComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
+  @Input() insideDetail: any;
   productList: any = []
-  filterSelected: any = 'default';
+  filterSelected: any = 'reviewDesc';
   ngOnInit(): void {
     this.productService.getProductList().subscribe((retorno: any) => {
       this.productList = retorno;
@@ -19,13 +20,17 @@ export class ProductListComponent implements OnInit {
 
   sortBy(type) {
     switch (type) {
-      case 'review':
+      case 'reviewDesc':
         this.productList = this.productList.sort((a, b) => b.score - a.score)
         break;
-      case 'price':
-        this.productList = this.productList.sort((a, b) => a.price - b.price)
+      case 'reviewAsc':
+        this.productList = this.productList.sort((a, b) => a.score - b.score)
         break;
-      case 'default':
+      case 'priceDesc':
+        this.productList = this.productList.sort((a, b) => b.price - a.price)
+        break;
+      case 'priceAsc':
+        this.productList = this.productList.sort((a, b) => a.price - b.price)
         break;
     }
   }

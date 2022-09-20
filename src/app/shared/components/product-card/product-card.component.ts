@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -8,16 +9,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ProductCardComponent implements OnInit {
   @Input() product: any;
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   openSnackBar() {
-    this._snackBar.open('Produto adicionado ao carrinho.', 'OK', {
+    this._snackBar.open('Product added to cart.', 'OK', {
       duration: 300000,
-      verticalPosition: 'top',
-      horizontalPosition: 'right',
+      verticalPosition: 'bottom',
+      horizontalPosition: 'center',
       panelClass: ['snackbar'],
     });
   }
@@ -34,6 +35,12 @@ export class ProductCardComponent implements OnInit {
     productList.push(product)
     localStorage.setItem('productList', JSON.stringify(productList))
     this.openSnackBar();
+    window.dispatchEvent(new CustomEvent('updateCartEvent'));
+  }
+
+  openProduct(url) {
+    let newRouterLink = '/detail/' + url;
+    this.router.navigate(['/']).then(() => { this.router.navigate([newRouterLink]); })
   }
 
 }

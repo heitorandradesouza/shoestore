@@ -1,21 +1,31 @@
-<div class="header-orange-box">
-    <span class="home-product">
-        <span style="color: white">Home</span>
-        <span>/</span>
-        <span>Product</span>
-    </span>
-    <div class="showing-filter">
-        <span>Showing 1-12 of {{productList.length}} results</span>
-        <mat-form-field appearance="fill">
-            <mat-select [(value)]="filterSelected">
-                <mat-option value="default" (click)="sortBy('default')">Default sorting</mat-option>
-                <mat-option value="review" (click)="sortBy('review')">Sort by review</mat-option>
-                <mat-option value="price" (click)="sortBy('price')">Sort by price</mat-option>
-            </mat-select>
-        </mat-form-field>
+<div class="center">
+    <div class="header-orange-box">
+        <span class="home-product" *ngIf="!insideDetail">
+            <span style="color: white">Home</span>
+            <span>/</span>
+            <span>Product</span>
+        </span>
+        <span *ngIf="insideDetail" class="related-product">
+            Related Products
+        </span>
+        <span class="shop-header center">{{insideDetail?'':'Shop'}}</span>
+        <div class="showing-filter">
+            <span>Showing 1-12 of {{productList.length}} results</span>
+            <mat-form-field>
+                <mat-select [(value)]="filterSelected">
+                    <mat-option style="color: #000000" value="reviewDesc" (click)="sortBy('reviewDesc')">Review: high -
+                        low</mat-option>
+                    <mat-option style="color: #000000" value="reviewAsc" (click)="sortBy('reviewAsc')">Review: low -
+                        high</mat-option>
+                    <mat-option style="color: #000000" value="priceDesc" (click)="sortBy('priceDesc')">Price: high - low
+                    </mat-option>
+                    <mat-option style="color: #000000" value="priceAsc" (click)="sortBy('priceAsc')">Price: low - high
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
     </div>
 </div>
-<span class="shop-header center">Shop</span>
 
 <div class="itens-flex">
     <div *ngFor="let product of productList">

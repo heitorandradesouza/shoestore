@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450" opacity="1">
+	<defs>
+		<filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feGaussianBlur stdDeviation="50" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur">
+			</feGaussianBlur>
+		</filter>
+	</defs>
+	<g filter="url(#bbblurry-filter)">
+		<ellipse rx="127" ry="125.5" cx="405.69962657581675" cy="72.80402166193184" fill="hsla(25, 100%, 64%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="77.15885439786041" cy="65.20574396306819" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="567.0608076615767" cy="67.67782176624644" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="77.82395796342331" cy="243.72975436123943" fill="hsla(25, 100%, 64%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="723.2224786931819" cy="82.47071422230113" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="231.90257679332387" cy="70.4079062721946" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="725.1872114701705" cy="259.9663918235085" fill="hsla(25, 100%, 64%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="246.40101623535156" cy="242.46351623535156" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="406.6772710626775" cy="249.34940684925428" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="726.7558427290483" cy="244.75147594105113" fill="hsla(25, 100%, 64%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="403.2904385653409" cy="401.2009166370739" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="74.16731678355825" cy="419.5288169167259" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="419.93141313032663" cy="407.4977944113991" fill="hsla(25, 100%, 64%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="241.74288940429688" cy="418.5366654829545" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="574.9172529740766" cy="243.67489624023435" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="584.3675870028409" cy="411.955624667081" fill="hsla(25, 100%, 92%, 1)">
+		</ellipse>
+		<ellipse rx="127" ry="125.5" cx="727.6900690252131" cy="413.0894581187855" fill="hsla(25, 100%, 82%, 1)">
+		</ellipse>
+	</g>
+</svg>

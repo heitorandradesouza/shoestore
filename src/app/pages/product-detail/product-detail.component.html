@@ -1,69 +1,74 @@
-<div class="header-orange-box">
-    <span class="home-product">
-        <span>Home</span>
-        <span>/</span>
-        <span style="color: white">Product</span>
-    </span>
-    <div class="change-product">
-        <span>Next Product</span>
-        <span class="material-icons">arrow_back</span>
-        <span class="material-icons">arrow_forward</span>
+<div class="details">
+    <div class="center">
+        <div class="header-orange-box">
+            <span class="home-product">
+                <span>Home</span>
+                <span>/</span>
+                <span style="color: white">Product</span>
+            </span>
+            <span class="details-header center">Product Details</span>
+            <div class="change-product">
+                <span>Next Product</span>
+                <span class="material-icons">arrow_back</span>
+                <span class="material-icons">arrow_forward</span>
+            </div>
+        </div>
     </div>
-</div>
-<span class="details-header center">Product Details</span>
 
-<div class="detail-box">
-    <div class="sneaker-details">
-        <div class="sneaker-name">{{product.name}}</div>
-        <div class="sneaker-description">{{product.description}}</div>
-        <div class="sneaker-pics">
-            <div class="pic-box light-color">
-                <img class="detail-pic" style="transform: rotate(-90deg)" [src]="'assets/shoes/'+product.img">
+    <div class="detail-box" *ngIf="product?.name?.length > 0">
+        <div class="sneaker-details">
+            <div class="sneaker-name">{{product.name}}</div>
+            <div class="sneaker-description">{{product.description}}</div>
+            <div class="sneaker-pics">
+                <div class="pic-box light-color">
+                    <img class="detail-pic" style="transform: rotate(-90deg)" [src]="'assets/shoes/'+product.img">
+                </div>
+                <div class="pic-box orange-color">
+                    <img class="detail-pic" [src]="'assets/shoes/'+product.img">
+                </div>
+                <div class="pic-box light-color">
+                    <img class="detail-pic" style="transform: rotate(-45deg)" [src]="'assets/shoes/'+product.img">
+                </div>
             </div>
-            <div class="pic-box orange-color">
-                <img class="detail-pic" [src]="'assets/shoes/'+product.img">
+        </div>
+        <div class="sneaker-picture-price">
+            <div class="circle-shadow">
+                <div class="sneaker-picture-circle">
+                    <img class="sneaker-picture" [src]="'assets/shoes/'+product.img">
+                    <div class="price">{{product.price | currency: 'BRL'}}</div>
+                </div>
             </div>
-            <div class="pic-box light-color">
-                <img class="detail-pic" style="transform: rotate(-45deg)" [src]="'assets/shoes/'+product.img">
+        </div>
+        <div class="specifications">
+            <div class="review">
+                <span class="speci-text">Review:</span>
+                <div *ngFor="let n of numSequence(product.score)">
+                    <span class="material-icons" style="color: #fdc20c">
+                        grade
+                    </span>
+                </div>
+                <span class="speci-text">{{product.score}} ({{product.qtdReview}})</span>
             </div>
+            <div class="colors">
+                <span class="speci-text">Color:</span>
+                <button mat-fab style="background: #00d9ff" class="color-circle"></button>
+                <button mat-fab class="color-circle" style="background: #ff6b01"></button>
+                <button mat-fab class="color-circle" style="background: #fdc20c"></button>
+                <button mat-fab class="color-circle" style="background: #ab9160"></button>
+            </div>
+            <div class="sizes">
+                <span class="speci-text">Size:</span>
+                <div class="buttons-sizes">
+                    <button mat-raised-button class="button-color-size">37</button>
+                    <button mat-raised-button class="button-color-size">38</button>
+                    <button mat-raised-button class="button-color-size">39</button>
+                    <button mat-raised-button class="button-color-size">40</button>
+                    <button mat-raised-button class="button-color-size">41</button>
+                    <button mat-raised-button class="button-color-size">42</button>
+                </div>
+            </div>
+            <button mat-raised-button class="add-to-cart">Add to cart</button>
         </div>
     </div>
-    <div class="sneaker-picture-price">
-        <div class="circle-shadow">
-            <div class="sneaker-picture-circle">
-                <img class="sneaker-picture" [src]="'assets/shoes/'+product.img">
-                <div class="price">{{product.price | currency: 'BRL'}}</div>
-            </div>
-        </div>
-    </div>
-    <div class="specifications">
-        <div class="review">
-            <span class="speci-text">Review:</span>
-            <div *ngFor="let n of numSequence(product.score)">
-                <span class="material-icons" style="color: #fdc20c">
-                    grade
-                </span>
-            </div>
-            <span class="speci-text">{{product.score}} ({{product.qtdReview}})</span>
-        </div>
-        <div class="colors">
-            <span class="speci-text">Color:</span>
-            <button mat-fab style="background: #00d9ff" class="color-circle"></button>
-            <button mat-fab class="color-circle" style="background: #ff6b01"></button>
-            <button mat-fab class="color-circle" style="background: #fdc20c"></button>
-            <button mat-fab class="color-circle" style="background: #ab9160"></button>
-        </div>
-        <div class="sizes">
-            <span class="speci-text">Size:</span>
-            <div class="buttons-sizes">
-                <button mat-raised-button class="button-color-size">37</button>
-                <button mat-raised-button class="button-color-size">38</button>
-                <button mat-raised-button class="button-color-size">39</button>
-                <button mat-raised-button class="button-color-size">40</button>
-                <button mat-raised-button class="button-color-size">41</button>
-                <button mat-raised-button class="button-color-size">42</button>
-            </div>
-        </div>
-        <button mat-raised-button class="add-to-cart">Add to cart</button>
-    </div>
+    <app-product-list [insideDetail]="true"></app-product-list>
 </div>

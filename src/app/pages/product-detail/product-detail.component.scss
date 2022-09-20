@@ -1,7 +1,6 @@
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.details {
+  overflow: auto;
+  height: 700px;
 }
 
 .material-icons {
@@ -11,32 +10,28 @@
 .home-product {
   display: flex;
   gap: 3px;
+  align-items: center;
 }
 
 .header-orange-box {
-  padding: 0px 30px 30px 30px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: -25px;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 1145px;
 
   .change-product {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: flex-end;
   }
 }
 
 .details-header {
   font-weight: 700;
-  top: -76px;
-  font-size: 35px;
-  position: relative;
+  font-size: 30px;
   letter-spacing: -1px;
-  position: relative;
 }
 
 .detail-box {
@@ -49,6 +44,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   padding: 100px 55px 100px 55px;
+  margin-top: 20px;
 
   .sneaker-details {
     display: flex;
@@ -179,5 +175,11 @@
     color: #e7b10b;
     height: 60px;
     border-radius: 20px;
+  }
+}
+:host ::ng-deep {
+  .itens-flex {
+    overflow: clip !important;
+    height: auto !important;
   }
 }
